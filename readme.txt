@@ -1,3 +1,7 @@
+Disclaimer:
+This application is not production ready implementation with an intention to only to support internal group of experts working on harmonizing Ethiopian industrial classifications with international best practices. Hence, we do not suggest building production environments with this code base as is. 
+
+
 
 📘 ESIC–ISIC Semantic Mapper
     This application uses vector similarity to semantically map 
