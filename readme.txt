@@ -18,7 +18,7 @@ This application is not production ready implementation with an intention to onl
     Web UI	                               Streamlit-powered interface for live queries
 
 🚀 Test Results 
-    Below is a result based on mappiong done to help matching of Ethiopin industrial classification used for business licensing with the closest ISIC Rev.5 class.
+    Below is a result based on mapping done to help matching of Ethiopian industrial classification used for business licensing with the closest ISIC Rev.5 class.
    
     N.th Match              Count of ESIC Code
         1	                    282
