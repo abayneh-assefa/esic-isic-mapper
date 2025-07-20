@@ -1,0 +1,26 @@
+embedding_model: "nomic-embed-text"
+mongo_uri: "mongodb://mongo:27017"
+
+collections:
+  esic: "esic_codes"
+  isic: "isic"
+  results: "mapping_results"
+
+embedding:
+  target_field: "title"           # 👈 Use this if embedding one field
+  # fields:                        # 👈 Uncomment for multi-field embedding
+  #   - sector
+  #   - division
+  #   - major_group
+  #   - group
+  #   - licensing_category
+  dimension: 768
+  normalization_mode: "cosine"    # Options: cosine, dotProduct, distance
+
+search:
+  k_top: 3
+  similarity_threshold: 0.75
+
+mapping:
+  multi_label: true
+  explainability: true

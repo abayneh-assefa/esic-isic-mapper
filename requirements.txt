@@ -1,0 +1,9 @@
+pymongo
+requests
+openpyxl
+python-dotenv
+scikit-learn
+pyyaml
+xlsxwriter
+streamlit
+

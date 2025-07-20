@@ -1,0 +1,27 @@
+services:
+  mongo:
+    image: mongo:latest
+    container_name: mongo
+    ports:
+      - "27017:27017"
+    volumes:
+      - mongo_data:/data/db
+    restart: unless-stopped
+
+  esic_isic_app:
+    build: .
+    container_name: esic_isic_app
+    depends_on:
+      - mongo
+    ports:
+      - "8501:8501"  # Streamlit UI
+    volumes:
+      - .:/app
+    command: streamlit run web_ui.py --server.port=8501 --server.address=0.0.0.0
+    environment:
+      - STREAMLIT_SERVER_HEADLESS=true
+      - PYTHONUNBUFFERED=1
+    restart: unless-stopped
+
+volumes:
+  mongo_data:
